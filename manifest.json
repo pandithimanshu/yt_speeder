@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Video Speed Controller",
+  "version": "1.0",
+  "description": "Control video playback speed using keyboard shortcuts.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "increase_speed": {
+      "suggested_key": {
+        "default": "Ctrl+Up",
+        "mac": "Command+Up"
+      },
+      "description": "Increase video playback speed"
+    },
+    "decrease_speed": {
+      "suggested_key": {
+        "default": "Ctrl+Down",
+        "mac": "Command+Down"
+      },
+      "description": "Decrease video playback speed"
+    },
+    "reset_speed": {
+      "suggested_key": {
+        "default": "Ctrl+0",
+        "mac": "Command+0"
+      },
+      "description": "Reset video playback speed"
+    }
+  }
+}
